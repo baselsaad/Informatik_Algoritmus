@@ -14,8 +14,8 @@ public class InsertionSort extends SortMethoden
      * ......
      */
 
-    //Zusammenfassung => erste schleife läuft forwärts 
-    //und die innere schleife läuft rückwirts, in Abhhängikeit von i aus erste schleife
+    //Zusammenfassung => erste schleife läuft nach vorne 
+    //und die innere schleife läuft rückwärts, in Abhhängikeit von i aus der ersten schleife
 
    
     @Override
