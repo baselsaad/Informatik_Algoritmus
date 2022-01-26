@@ -14,7 +14,6 @@ public class CountingSort extends SortMethoden
         for (int i = 0; i < a.length; i++) {
             counts[a[i]]++;
         }
-        
         // 3,2,0,2,1,4,4
         //counts {1,1,1+1,1,1+1}
         
@@ -26,9 +25,7 @@ public class CountingSort extends SortMethoden
                 i++;
             }
         }
-        
         //counts {1,1,2,1,2}
-        
         //counts.length = 7
         
         //0- a {3,2,0,2,1,4,4}
@@ -39,8 +36,6 @@ public class CountingSort extends SortMethoden
         //5- a {0,1,2,2,3,4,4}    j = 3, i = 4 , counts[j] = 1 , k = 0 
         //6- a {0,1,2,2,1,4,4}    j = 4, i = 5 , counts[j] = 2 , k = 0
         //7- a {0,1,2,2,1,4,4}    j = 4, i = 6 , counts[j] = 2 , k = 1
-        
-        
         return a;
     }
 
