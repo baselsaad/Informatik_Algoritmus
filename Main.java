@@ -9,7 +9,15 @@ import java.util.Random;
 public class Main
 {
     public static void main (String[] args){
-        int[] array = arrayErzeuger(50);
+        System.out.println("Create Array \nStart sorting....");
+        int[] array = arrayErzeuger(100000000);
+        
+        long start = System.currentTimeMillis();
+        array = new MergSort().sort(array);
+        System.out.println((float)(System.currentTimeMillis() - start)/1000 + "s");
+        
+        
+        /*
         SortMethoden[] list = {
                 new InsertionSort(),
                 new BubbleSort(),
@@ -32,7 +40,7 @@ public class Main
             System.out.print(arraylist[i]+",");
         }
         searchNumber(arraylist,random,new LinearSearch());
-        searchNumber(arraylist,random,new BinarySearch());
+        searchNumber(arraylist,random,new BinarySearch()); */
     }
 
     private static void searchNumber (int[] a , int number,ISearch s){
