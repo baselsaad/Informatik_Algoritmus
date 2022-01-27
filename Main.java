@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Beschreiben Sie hier die Klasse Main.
@@ -9,8 +10,10 @@ import java.util.Random;
 public class Main
 {
     public static void main (String[] args){
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
         System.out.println("Create Array \nStart sorting....");
-        int[] array = arrayErzeuger(100000000);
+        int[] array = arrayErzeuger(10000000);
         
         long start = System.currentTimeMillis();
         array = new MergSort().sort(array);
