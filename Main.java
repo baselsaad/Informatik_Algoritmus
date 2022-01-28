@@ -10,37 +10,36 @@ import java.util.Scanner;
 public class Main
 {
     public static void main (String[] args){
-        Scanner scan = new Scanner(System.in);
-        String a = scan.next();
+        long aStart = System.currentTimeMillis();
+        int[] array = arrayErzeuger(100000000);
+        System.out.println((float)(System.currentTimeMillis() - aStart)/1000 + "s");
         System.out.println("Create Array \nStart sorting....");
-        int[] array = arrayErzeuger(10000000);
         
         long start = System.currentTimeMillis();
         array = new MergSort().sort(array);
         System.out.println((float)(System.currentTimeMillis() - start)/1000 + "s");
-        
-        
+
         /*
         SortMethoden[] list = {
-                new InsertionSort(),
-                new BubbleSort(),
-                new SelectionSort(),
-                new MergSort(),
-                //new QuickSort(),
-                new CountingSort()
-            };
-            
+        //new InsertionSort(),
+        //new BubbleSort(),
+        //new SelectionSort(),
+        //new MergSort(),
+        //new QuickSort(),
+        new CountingSort()
+        };
+
         arrayAuswerfen (array,list);
-        
+
         //Searching
         int random = array[getRandomNumber(1,array.length-5)];
         System.out.println("\nRandom Number is : "+random);
-        
+
         searchNumber(array,random,new LinearSearch());
-        
+
         int[] arraylist = list[3].sort(array);
         for(int i = 0; i< arraylist.length;i++){
-            System.out.print(arraylist[i]+",");
+        System.out.print(arraylist[i]+",");
         }
         searchNumber(arraylist,random,new LinearSearch());
         searchNumber(arraylist,random,new BinarySearch()); */
@@ -61,9 +60,9 @@ public class Main
         for (int j = 0; j < list.length;j++){
             int array[] = list[j].sort(a);
             System.out.println("\n\n"+list[j].getAlgoritmusName());
-           /* for (int i = 0; i < a.length;i++){
+            for (int i = 0; i < a.length;i++){
                 System.out.print(array[i]+",");
-            }*/
+            }
         }
 
     }
