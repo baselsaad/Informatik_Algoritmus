@@ -46,7 +46,7 @@ public class MergSort extends SortMethoden
             index++;
         }
         
-        // Gemischtes Array zurückgeben
+        //Gemischtes Array zurückgeben
         return merged;
     }
     
